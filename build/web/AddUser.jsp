@@ -9,12 +9,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="fontawesome-free-5.7.2-web/css/all.css">
+        <link rel="icon" type="image/ico" href="images/culogo1.png"/>
         <title>Add User</title>
         <style>
             body{
                 margin: 0px;
-                
             }
             .formdiv{
                 text-align: center;
@@ -31,7 +31,7 @@
                 width:400px;
                 position:relative;
                 left:50px;
-                top:30px;
+                top:10px;
             }
             .input{
                 height:40px;
@@ -44,6 +44,8 @@
             .input:focus{
                 border:2px solid lightblue;
                 background-color: white;
+                box-sizing: border-box;
+                box-shadow: 0px 0px 10px dodgerblue;
             }
             .submit{
                 height:40px;
@@ -84,15 +86,32 @@
                 else if(res==="19"){
                     document.getElementById('batch').selectedIndex="4";
                 }
-            }    
+            }
+            function validate(){
+                var a=document["myform"]["userid"].value;
+                var b=document["myform"]["username"].value;
+                var d=document["myform"]["fthname"].value;
+                var e=document["myform"]["mthname"].value;
+                var f=document["myform"]["mobileno"].value;
+                var g=document["myform"]["email"].value;
+                if(a==="" | b==="" | d==="" | e==="" | f==="" | g==="" ){
+                    alert("Please don't left field/fields empty!!! Fill all of them");
+                    return false;
+                }
+            }
         </script>
     </head>
     <body>
+ <% 
+        if(session.getAttribute("LibFacLog")==null){
+            response.sendRedirect("UserLogin.jsp");
+        }
+    %>
         <div class="formdiv">
             <%
                 HttpSession q=request.getSession();
                 if(q.getAttribute("AddSuccess")!=null){
-                    out.print("<p style='color:red;font-size:10px'>Added Successfully</p>");
+                    out.print("<p style='color:red;font-size:10px'>User Added Successfully</p>");
                     q.removeAttribute("AddSuccess");
                 }
             %>
@@ -112,7 +131,7 @@
                 <input type="text" placeholder="MOTHER'S NAME" name="mthname" class="input"><br><br>
                 <input type="text" placeholder="EMAIL" name="email" class="input"><br><br>
                 <input type="text" placeholder="MOBILE NUMBER" name="mobileno" class="input"><br><br>
-                <input type="submit" value="SUBMIT" class="submit" title="click to submit">
+                <input type="submit" value="SUBMIT" class="submit" title="click to submit" onclick="return validate()">
             </form>
             <br>
         </div>

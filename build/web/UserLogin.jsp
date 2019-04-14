@@ -8,6 +8,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <link rel="stylesheet" href="fontawesome-free-5.7.2-web/css/all.css">
+        <link rel="icon" type="image/ico" href="images/culogo1.png"/>
     <title>User Login</title>
     <style>
     body{
@@ -25,6 +27,7 @@
     .input:focus{
       border:2px solid lightblue;
       background-color: white;
+      box-shadow: 0px 0px 10px dodgerblue;
     }
     .submit{
       height:40px;

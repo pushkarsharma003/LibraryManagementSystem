@@ -46,6 +46,8 @@ public class UserLogin extends HttpServlet {
         String userid=request.getParameter("userid");
         String password=request.getParameter("password");
         if(userid.equals("lib123") && password.equals("123")){            
+            HttpSession h=request.getSession();
+            h.setAttribute("LibFacLog",111);
             RequestDispatcher rd=request.getRequestDispatcher("LibFacultyHome.jsp");
             rd.forward(request, response);
             request.setAttribute("userid", userid);

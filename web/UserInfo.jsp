@@ -17,10 +17,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="fontawesome-free-5.7.2-web/css/all.css">
+        <link rel="icon" type="image/ico" href="images/culogo1.png"/>
         <title>User Info</title>
     </head>
     <body>
+<% 
+        if(session.getAttribute("username")==null && session.getAttribute("userid")==null){
+            response.sendRedirect("UserLogin.jsp");
+        }  
+    %>
         <%
             HttpSession sr=request.getSession();
             Object ui=sr.getAttribute("userid");

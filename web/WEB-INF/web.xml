@@ -12,6 +12,26 @@
         <servlet-name>AddUser</servlet-name>
         <servlet-class>LibFaculty.AddUser</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddBook</servlet-name>
+        <servlet-class>LibFaculty.AddBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IssueBook</servlet-name>
+        <servlet-class>LibFaculty.IssueBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReturnBook</servlet-name>
+        <servlet-class>LibFaculty.ReturnBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchById</servlet-name>
+        <servlet-class>LibFaculty.SearchById</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PayFine</servlet-name>
+        <servlet-class>LibFaculty.PayFine</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserLogin</servlet-name>
         <url-pattern>/UserLogin</url-pattern>
@@ -23,6 +43,26 @@
     <servlet-mapping>
         <servlet-name>AddUser</servlet-name>
         <url-pattern>/AddUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddBook</servlet-name>
+        <url-pattern>/AddBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IssueBook</servlet-name>
+        <url-pattern>/IssueBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReturnBook</servlet-name>
+        <url-pattern>/ReturnBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchById</servlet-name>
+        <url-pattern>/SearchById</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PayFine</servlet-name>
+        <url-pattern>/PayFine</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

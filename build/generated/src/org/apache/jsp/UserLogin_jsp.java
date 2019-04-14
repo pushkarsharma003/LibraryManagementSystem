@@ -47,6 +47,8 @@ public final class UserLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("  <head>\n");
+      out.write("      <link rel=\"stylesheet\" href=\"fontawesome-free-5.7.2-web/css/all.css\">\n");
+      out.write("        <link rel=\"icon\" type=\"image/ico\" href=\"images/culogo1.png\"/>\n");
       out.write("    <title>User Login</title>\n");
       out.write("    <style>\n");
       out.write("    body{\n");
@@ -64,6 +66,7 @@ public final class UserLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    .input:focus{\n");
       out.write("      border:2px solid lightblue;\n");
       out.write("      background-color: white;\n");
+      out.write("      box-shadow: 0px 0px 10px dodgerblue;\n");
       out.write("    }\n");
       out.write("    .submit{\n");
       out.write("      height:40px;\n");
@@ -130,6 +133,20 @@ public final class UserLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            }\n");
       out.write("            else{\n");
       out.write("                document.getElementById('batch').disabled=false;\n");
+      out.write("                var res=x.substring(0,2);\n");
+      out.write("                if(res===\"16\")\n");
+      out.write("                {\n");
+      out.write("                    document.getElementById('batch').selectedIndex=\"1\";\n");
+      out.write("                }\n");
+      out.write("                else if(res===\"17\"){\n");
+      out.write("                    document.getElementById('batch').selectedIndex=\"2\";\n");
+      out.write("                }\n");
+      out.write("                else if(res===\"18\"){\n");
+      out.write("                    document.getElementById('batch').selectedIndex=\"3\";\n");
+      out.write("                }\n");
+      out.write("                else if(res===\"19\"){\n");
+      out.write("                    document.getElementById('batch').selectedIndex=\"4\";\n");
+      out.write("                }\n");
       out.write("            }\n");
       out.write("        }\n");
       out.write("    </script>\n");
